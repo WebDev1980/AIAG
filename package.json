@@ -8,8 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "vite build && copy CNAME dist\\",
+    "deploy": "gh-pages -d dist",
+    "update": "git add . && git commit -m \"Actualización de código\" && git push origin main && npm run deploy"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",

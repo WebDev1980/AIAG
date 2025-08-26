@@ -16,7 +16,7 @@ const MapModal = ({ children }) => {
         </div>
         <div className="flex-grow overflow-hidden m-0 p-0">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.633336249927!2d-101.6458126855986!3d21.12723798594518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0533687a29%3A0x4a1a9f6d6e3d11a7!2sPradera%201017%2C%20Azteca%2C%2037520%20Le%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1678886655443!5m2!1ses-419!2smx"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.574306695312!2d-101.676222!3d21.128021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0e8f4e4f4f%3A0x123456789abcdef!2sSuiza%20104%2C%20Andrade%2C%20Le%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1721570000000!5m2!1ses-419!2smx"
             className="w-full h-full rounded-md block"
             style={{ border: 0 }}
             allowFullScreen
@@ -35,7 +35,8 @@ const ContactoSection = ({ expanded, toggleSection }) => {
       icon: Phone,
       title: "Teléfono",
       lines: [
-        "+52 1 479 225 0552",
+        "479 225 0552 - WApp",
+        "800 700 0821 - Oficina",
         "Lun - Vie: 9:00 - 17:00",
         "Sábado: 9:00 - 14:00",
       ],
@@ -49,6 +50,7 @@ const ContactoSection = ({ expanded, toggleSection }) => {
         "contacto@aiag.mx",
         "Respuesta promedio: +/- 24 horas",
         "Sábado: 9:00 - 14:00",
+        "Sábado: 9:00 - 14:00", // invisible
       ],
       buttonText: "Enviar Email",
       action: () => window.open("mailto:contacto@aiag.mx"),
@@ -56,7 +58,12 @@ const ContactoSection = ({ expanded, toggleSection }) => {
     {
       icon: MapPin,
       title: "Dirección",
-      lines: ["Pradera 1017, Azteca,", "León, Gto.", "Sábado: 9:00 - 14:00"],
+      lines: [
+        "Suiza 104, Andrade",
+        "León, Gto.",
+        "Sábado: 9:00 - 14:00",
+        "Sábado: 9:00 - 14:00",
+      ],
       buttonText: "Ver Mapa",
       isMap: true,
     },
@@ -102,7 +109,7 @@ const ContactoSection = ({ expanded, toggleSection }) => {
                       <div>
                         {card.lines.map((line, i) => {
                           const isInvisible =
-                            card.title !== "Teléfono" && i === 2;
+                            card.title !== "Teléfono" && (i === 2 || i === 3);
                           const isGreyText =
                             line === "Lun - Vie: 9:00 - 17:00" ||
                             line === "Sábado: 9:00 - 14:00" ||

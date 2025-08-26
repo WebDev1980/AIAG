@@ -23,8 +23,8 @@ const Header = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* 🔘 Logo y marca vinculados a raíz */}
-            <a href="/" className="flex items-center space-x-3 cursor-pointer">
-              <img className="w-14 h-14" alt="Logo AIAG" src={logoAIAG} />{" "}
+            <a href="/AIAG/" className="flex items-center space-x-3 cursor-pointer">
+              <img className="w-14 h-14" alt="Logo AIAG" src={logoAIAG} />
               {/* ✅ Aquí se usa el logo importado */}
               <span className="text-3xl font-bold text-[#16295C] dark:text-white">
                 AIAG
